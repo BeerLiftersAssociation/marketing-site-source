@@ -10,7 +10,7 @@ git commit -am "$varname"
 jekyll build --destination ../beerliftersassociation.github.io/
 cd ../beerliftersassociation.github.io/
 git add -A
-git commit -am "Deploy"
+git commit -am "Deploy, $varname"
 git push
 cd ../marketing-site-source
 echo "Complete"
