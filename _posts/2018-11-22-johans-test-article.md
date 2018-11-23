@@ -1,15 +1,32 @@
 ---
 layout: post
 current: post
-cover:  assets/images/advanced.jpg
+cover:  assets/images/posts/advanced.jpg
 navigation: True
-title: Advanced Markdown tips
-date: 2017-07-27 05:00:00
-tags: [Getting started]
+title: Johans Test Article
+date: 2017-07-27 09:00:00
+tags: [cloud]
 class: post-template
 subclass: 'post tag-getting-started'
-author: ghost
+author: johans
 ---
+
+Some code:
+
+**This is a test post.**
+
+### A list:
+1. stuff
+2. yep
+3. foobar
+ 
+[A Link](https://www.google.com) blah blah
+
+You can even blend in HTML with markdown on the same page.
+<pre><code>.my-link {
+    text-decoration: underline;
+}
+</code></pre>
 
 
 <p>There are lots of powerful things you can do with the Ghost editor</p>
@@ -55,3 +72,5 @@ author: ghost
 <li id="fn2" class="footnote-item"><p>Dogs are usually not red <a href="#fnref2" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
+
+

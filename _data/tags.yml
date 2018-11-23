@@ -1,16 +1,16 @@
-speeches:
-  name: speeches
-  description: Some of the greatest words ever spoken.
-  cover: assets/images/speeches.jpg
-fiction:
-  name: fiction
+about:
+  name: about
+  description: Concerns of the blog
+  cover: false
+coding:
+  name: coding
   description: False
   cover: False
-fables:
-  name: fables
-  description: A series of short stories that make you think.
-  cover: assets/images/fables.jpg
-getting-started:
-  name: getting-started
-  description: False
+python:
+  name: python
+  description: The Python Software Language
+  cover: false
+cloud:
+  name: cloud
+  description: Cloud stuff like AWS
   cover: False

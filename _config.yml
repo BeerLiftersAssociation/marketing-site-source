@@ -10,10 +10,10 @@ baseurl: /
 # Website info
 title: Beer Lifters Association
 description: Collaborative, Benevolent, Open-Source Technology Projects
-cover: assets/images/bla-landing2.png
-logo: assets/images/bla-logo-wide.png
+cover: assets/images/site/bla-landing2.png
+logo: assets/images/site/bla-logo-wide.png
 logo_dark: 
-favicon: assets/images/favicon.png
+favicon: assets/images/site/favicon.png
 production_url: https://beerliftersassociation.github.io/
 source_url: https://github.com/beerliftersassociation/marketing-site-source
 CNAME: #add cname for website to be created
@@ -26,7 +26,7 @@ subscribers: False # you need to connect an external service for this to work,
 twitter:  # replace by your username
 facebook:  # replace by your username
 github: BeerLiftersAssociation
-slack: beerliftersassocation
+slack: beerlifters
 
 # Disqus
 disqus: False
