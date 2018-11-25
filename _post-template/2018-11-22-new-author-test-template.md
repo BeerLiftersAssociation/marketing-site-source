@@ -1,15 +1,110 @@
 ---
 layout: post
 current: post
-cover: assets/images/posts/hannah-cover.jpg
+cover:  assets/images/posts/test-bars.png
 navigation: True
-title: A Full and Comprehensive Style Test
-date: 2012-09-01 10:00:00
-tags:
+title: new-author Test Article
+date: 2017-07-27 09:00:00
+tags: [welcome-to-the-team, about]
 class: post-template
-subclass: 'post'
-author: rob
+subclass: 'post tag-getting-started'
+author: new-author
 ---
+
+## Some helpful info for new authors:
+
+### Using tags:
+<p>Ghost has a single, powerful organisational taxonomy, called tags.</p>
+<p>It doesn't matter whether you want to call them categories, tags, boxes, or anything else. You can think of Ghost tags a lot like Gmail labels. By tagging posts with one or more keyword, you can organise articles into buckets of related content.</p>
+<h2 id="basictagging">Basic tagging</h2>
+<p>When you write a post, you can assign tags to help differentiate between categories of content. For example, you might tag some posts with <code>News</code> and other posts with <code>Cycling</code>, which would create two distinct categories of content listed on <code>/tag/news/</code> and <code>/tag/cycling/</code>, respectively.</p>
+<p>If you tag a post with both <code>News</code> <em>and</em> <code>Cycling</code> - then it appears in both sections.</p>
+<p>Tag archives are like dedicated home-pages for each category of content that you have. They have their own pages, their own RSS feeds, and can support their own cover images and meta data.</p>
+<h2 id="theprimarytag">The primary tag</h2>
+<p>Inside the Ghost editor, you can drag and drop tags into a specific order. The first tag in the list is always given the most importance, and some themes will only display the primary tag (the first tag in the list) by default. So you can add the most important tag which you want to show up in your theme, but also add a bunch of related tags which are less important.</p>
+<p><mark><strong>News</strong>, Cycling, Bart Stevens, Extreme Sports</mark></p>
+<p>In this example, <strong>News</strong> is the primary tag which will be displayed by the theme, but the post will also still receive all the other tags, and show up in their respective archives.</p>
+<h2 id="privatetags">Private tags</h2>
+<p>Sometimes you may want to assign a post a specific tag, but you don't necessarily want that tag appearing in the theme or creating an archive page. In Ghost, hashtags are private and can be used for special styling.</p>
+<p>For example, if you sometimes publish posts with video content - you might want your theme to adapt and get rid of the sidebar for these posts, to give more space for an embedded video to fill the screen. In this case, you could use private tags to tell your theme what to do.</p>
+<p><mark><strong>News</strong>, Cycling, #video</mark></p>
+<p>Here, the theme would assign the post publicly displayed tags of <code>News</code>, and <code>Cycling</code> - but it would also keep a private record of the post being tagged with <code>#video</code>.</p>
+<p>In your theme, you could then look for private tags conditionally and give them special formatting:</p>
+{% raw %}
+<pre><code class="nohighlight">{{#post}}
+    {{#has tag=&quot;#video&quot;}}
+        ...markup for a nice big video post layout...
+    {{else}}
+        ...regular markup for a post...
+    {{/has}}
+{{/post}}
+</code></pre>
+<p>You can find documentation for theme development techniques like this and many more over on Ghost's extensive <a href="https://themes.ghost.org/">theme documentation</a>.</p>
+{% endraw %}
+
+### General Markup
+Some code:
+
+**This is a test post.**
+
+### A list:
+1. stuff
+2. yep
+3. foobar
+ 
+[A Link](https://www.google.com) blah blah
+
+You can even blend in HTML with markdown on the same page.
+<pre><code>.my-link {
+    text-decoration: underline;
+}
+</code></pre>
+
+
+<p>There are lots of powerful things you can do with the Ghost editor</p>
+<p>If you've gotten pretty comfortable with <a href="/the-editor/">all the basics</a> of writing in Ghost, then you may enjoy some more advanced tips about the types of things you can do with Markdown!</p>
+<p>As with the last post about the editor, you'll want to be actually editing this post as you read it so that you can see all the Markdown code we're using.</p>
+<h2 id="specialformatting">Special formatting</h2>
+<p>As well as bold and italics, you can also use some other special formatting in Markdown when the need arises, for example:</p>
+<ul>
+<li><s>strike through</s></li>
+<li><mark>highlight</mark></li>
+<li>*escaped characters*</li>
+</ul>
+<h2 id="writingcodeblocks">Writing code blocks</h2>
+<p>There are two types of code elements which can be inserted in Markdown, the first is inline, and the other is block. Inline code is formatted by wrapping any word or words in back-ticks, <code>like this</code>. Larger snippets of code can be displayed across multiple lines using triple back ticks:</p>
+<pre><code>.my-link {
+    text-decoration: underline;
+}
+</code></pre>
+<p>If you want to get really fancy, you can even add syntax highlighting using <a href="http://prismjs.com/">Prism.js</a>.</p>
+<h2 id="fullbleedimages">Full bleed images</h2>
+<p>One neat trick which you can use in Markdown to distinguish between different types of images is to add a <code>#hash</code> value to the end of the source URL, and then target images containing the hash with special styling. For example:</p>
+<p><img src="https://casper.ghost.org/v1.0.0/images/walking.jpg#full" alt="walking"></p>
+<p>which is styled with...</p>
+<pre><code>img[src$=&quot;#full&quot;] {
+    max-width: 100vw;
+}
+</code></pre>
+<p>This creates full-bleed images in the Casper theme, which stretch beyond their usual boundaries right up to the edge of the window. Every theme handles these types of things slightly differently, but it's a great trick to play with if you want to have a variety of image sizes and styles.</p>
+<h2 id="referencelists">Reference lists</h2>
+<p><strong>The quick brown <a href="https://en.wikipedia.org/wiki/Fox" title="Wikipedia: Fox">fox</a>, jumped over the lazy <a href="https://en.wikipedia.org/wiki/Dog" title="Wikipedia: Dog">dog</a>.</strong></p>
+<p>Another way to insert links in markdown is using reference lists. You might want to use this style of linking to cite reference material in a Wikipedia-style. All of the links are listed at the end of the document, so you can maintain full separation between content and its source or reference.</p>
+<h2 id="creatingfootnotes">Creating footnotes</h2>
+<p>The quick brown fox<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> jumped over the lazy dog<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>.</p>
+<p>Footnotes are a great way to add additional contextual details when appropriate. Ghost will automatically add footnote content to the very end of your post.</p>
+<h2 id="fullhtml">Full HTML</h2>
+<p>Perhaps the best part of Markdown is that you're never limited to just Markdown. You can write HTML directly in the Ghost editor and it will just work as HTML usually does. No limits! Here's a standard YouTube embed code as an example:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Cniqsc9QfDo?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>Foxes are red <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>Dogs are usually not red <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+
 
 <p>Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.</p>
 
@@ -422,3 +517,5 @@ c.draw = function() {
 <p></div><script async src="//codepen.io/assets/embed/ei.js"></script></p>
 
 <p>Isn't it beautiful?</p>
+
+Image Credit: https://en.wikipedia.org/wiki/Test_card#/media/File:SMPTE_Color_Bars.svg

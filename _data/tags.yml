@@ -2,15 +2,27 @@ about:
   name: about
   description: Concerns of the blog
   cover: false
+cloud:
+  name: cloud
+  description: Cloud stuff like AWS
+  cover: False
 coding:
   name: coding
   description: False
+  cover: False
+design:
+  name: design
+  description: Functional and Technical Design
+  cover: False
+welcome-to-the-team:
+  name: welcome-to-the-team
+  description: New Team Member/Author
+  cover: False
+project1:
+  name: project1
+  description: The first app, project 1
   cover: False
 python:
   name: python
   description: The Python Software Language
   cover: false
-cloud:
-  name: cloud
-  description: Cloud stuff like AWS
-  cover: False
