@@ -44,15 +44,28 @@ author: rob
 
 #### Option 2
 - *Summary* 
-  - Serverless, REST backend
-Pro:
-Con:
+  - Serverless, REST backend.
+  - JS framework front-end, hosted from cloudfront, backed by S3.
+- *Pro*
+  - JS front-end takes load and cost out of system
+  - Cognito for user management, don't have to reinvent the wheel
+  - More native approach by building on AWS services
+  - More cost effective/capacity effect for small project than option #1
+- *Con* 
+  - Writing Cloudformation templates for API Gateway is not fluid, there is quite a bit of bloaty boilerplate.
+  - Front-end skillset needed.
 
 #### Option 3
 - *Summary* 
   - Serverless, GRAPHQL backend
-Pro:
-Con:
+  - JS framework front-end, hosted from cloudfront, backed by S3.
+- *Pro*
+  - JS front-end takes load and cost out of system
+  - Cognito for user management, don't have to reinvent the wheel
+  - More native approach by building on AWS services.  Use of AWS Amplify library is a big win for abstracting services and easy wiring.
+  - Most cost effective/capacity effect for small project than option #1
+- *Con* 
+  - Front-end skillset needed
 
 ### Notes
 - [Github Link](https://github.com/BeerLiftersAssociation/design/blob/master/project_1/architecture-options-project1.xml)
